@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <title>Text Properties Example</title>
+    <style>
+        /* ตั้งค่าพื้นฐาน */
+        body {
+            font-family: 'Sarabun', 'Tahoma', sans-serif;
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+
+        /* หัวข้อหลัก */
+        h2 {
+            margin-top: 0;
+            font-size: 24px;
+            color: #2c3e50;
+        }
+
+        /* หัวข้อย่อย (1, 2, 3) */
+        h3 {
+            font-size: 18px;
+            margin-top: 25px;
+            margin-bottom: 15px;
+        }
+
+        /* ปรับแต่งข้อความทั่วไป */
+        p {
+            margin: 8px 0;
+            color: #333;
+        }
+
+        /* --- 1. การจัดแนวข้อความ (text-align) --- */
+        .left { text-align: left; }
+        .center { text-align: center; }
+        .right { text-align: right; }
+        .justify { 
+            text-align: justify; 
+            text-justify: inter-word; 
+        }
+
+        /* --- 2. การตกแต่งข้อความ (text-decoration) --- */
+        .underline { text-decoration: underline; }
+        .line-through { text-decoration: line-through; }
+        .none { text-decoration: none; }
+
+        /* --- 3. การกำหนดระยะบรรทัด (line-height) --- */
+        .lh-1-5 { 
+            line-height: 1.5; 
+            margin-bottom: 20px; 
+        }
+        .lh-24px { 
+            line-height: 24px; 
+        }
+
+        /* เน้นส่วนที่เป็นคำภาษาอังกฤษในวงเล็บ */
+        span.code-text {
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+
+<div class="main-container">
+    <h2>Text Properties - Example</h2>
+
+    <h3>1. การจัดแนวข้อความ <span class="code-text">(text-align)</span></h3>
+    <p class="left">ข้อความนี้จัดชิดซ้าย (left)</p>
+    <p class="center">ข้อความนี้จัดกึ่งกลาง (center)</p>
+    <p class="right">ข้อความนี้จัดชิดขวา (right)</p>
+    <p class="justify">ข้อความนี้จัดเต็มบรรทัด (justify) เพื่อให้ชิดทั้งซ้ายและขวาโดยอัตโนมัติ </p>
+
+    <hr style="border: 0; border-top: 1px solid #eee; margin: 20px 0;">
+
+    <h3>2. การตกแต่งข้อความ <span class="code-text">(text-decoration)</span></h3>
+    <p class="underline">ข้อความนี้ขีดเส้นใต้ (underline)</p>
+    <p class="line-through">ข้อความนี้ขีดฆ่า (line-through)</p>
+    <p class="none">ข้อความนี้ไม่มีการตกแต่ง (none)</p>
+
+    <hr style="border: 0; border-top: 1px solid #eee; margin: 20px 0;">
+
+    <h3>3. การกำหนดระยะบรรทัด <span class="code-text">(line-height)</span></h3>
+    <p class="lh-1-5">ระยะบรรทัด 1.5 เท่า - เหมาะสำหรับการอ่านแบบสบายตาในบทความทั่วไป</p>
+    <p class="lh-24px">ระยะบรรทัด 24px - ควบคุมความสูงบรรทัดแบบคงที่</p>
+</div>
+
+</body>
+</html>
