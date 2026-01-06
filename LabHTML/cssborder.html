@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+  .box {
+    width: 250px;
+    height: 150px;
+    padding: 20px;
+    margin: 20px;
+    display: inline-block; /* เรียงต่อกันแนวนอน */
+    vertical-align: top;
+    text-align: center;
+    background-color: #f0f0f0;
+    box-sizing: border-box; /* ใช้ border-box เพื่อให้คำนวณขนาดง่าย */
+  }
+
+  /* 1) การใช้ Border และ Border-style แบบต่างๆ */
+  .border-solid {
+    border: 5px solid #0077ff; 
+  }
+
+  .border-dashed {
+    border: 5px dashed #ff5733; /* เส้นประ */
+  }
+
+  .border-double {
+    border: 10px double #28a745; /* เส้นคู่ */
+  }
+
+  /* 2) การใช้ Border-radius (มุมโค้ง) */
+  .radius-all {
+    border: 4px solid #333;
+    border-radius: 20px; /* โค้งทุกมุมเท่ากัน */
+  }
+
+  .radius-top {
+    border: 4px solid #333;
+    border-radius: 30px 30px 0 0; /* โค้งเฉพาะด้านบน (บนซ้าย บนขวา ล่างขวา ล่างซ้าย) */
+  }
+
+  .circle {
+    width: 150px; /* ความกว้างต้องเท่ากับความสูง */
+    height: 150px;
+    border: 4px solid #333;
+    border-radius: 50%; /* กลายเป็นวงกลม */
+    background-color: #a0e7e5;
+  }
+
+  /* 3) การใช้ Box-shadow (เงา) */
+  .shadow-basic {
+    border: 1px solid #ddd;
+    /* แนวนอน 10px | แนวตั้ง 10px | ความฟุ้ง 5px | สี */
+    box-shadow: 10px 10px 5px rgba(0,0,0,0.3);
+  }
+
+  .shadow-inset {
+    border: 1px solid #ddd;
+    /* ใส่เงาด้านในกล่อง */
+    box-shadow: inset 0 0 15px rgba(0,0,0,0.4);
+  }
+
+  .shadow-soft {
+    border: 1px solid #ddd;
+    background-color: #ffd8cc;
+    /* เงาฟุ้งนุ่มๆ อยู่ตรงกลาง */
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+  }
+
+</style>
+</head>
+
+<body>
+
+    <h2>border / border-radius / box-shadow</h2>
+
+<h3>1) Border Styles (เส้นขอบ)</h3>
+<div class="box border-solid">Solid Border</div>
+<div class="box border-dashed">Dashed Border</div>
+<div class="box border-double">Double Border</div>
+
+<hr>
+
+<h3>2) Border Radius (มุมโค้ง)</h3>
+<div class="box radius-all">Rounded 20px</div>
+<div class="box radius-top">Top Rounded Only</div>
+<div class="box circle">Circle (50%)</div>
+
+<hr>
+
+<h3>3) Box Shadow (การใส่เงา)</h3>
+<div class="box shadow-basic">Basic Outer Shadow</div>
+<div class="box shadow-inset">Inset Shadow (ด้านใน)</div>
+<div class="box shadow-soft">Soft Glow Shadow</div>
+
+</body>
+</html>

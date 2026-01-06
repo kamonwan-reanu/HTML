@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Display Example</title>
+    <style>
+        /* ------------------ STYLE FOR DEMO ------------------ */
+        .block-example div {
+            display: block;
+            padding: 10px;
+            margin-bottom: 5px;
+            background: #c8e6ff; /* ฟ้า */
+        }
+
+        .inline-example span {
+            display: inline;
+            padding: 5px;
+            background: #ffc8c8; /* ชมพู */
+            margin-right: 5px;
+        }
+
+        .inline-block-example div {
+            display: inline-block;
+            width: 120px;
+            height: 40px;
+            background: #d2ffd2; /* เขียวอ่อน */
+            margin-right: 10px;
+            text-align: center;
+            line-height: 40px;
+            border: 1px solid #4caf50;
+        }
+        /* ------------------------------------------------------ */
+
+        body { font-family: sans-serif; padding: 20px; color: #333; }
+        h1 { font-family: serif; font-size: 24px; border-bottom: 1px solid #ccc; padding-bottom: 10px; margin-top: 30px; }
+        p { font-size: 16px; margin-bottom: 15px; }
+    </style>
+</head>
+<body>
+
+    <h1>display: block;</h1>
+    <p>✓ กินพื้นที่เต็มบรรทัด และขึ้นบรรทัดใหม่เสมอ</p>
+    <div class="block-example">
+        <div>Block 1</div>
+        <div>Block 2</div>
+    </div>
+
+    <h1>display: inline;</h1>
+    <p>✓ อยู่ในบรรทัดเดียวกัน และไม่สามารถกำหนด width/height ได้</p>
+    <div class="inline-example">
+        <span>Inline 1</span>
+        <span>Inline 2 Inline 2</span>
+        <span>Inline 3</span>
+    </div>
+
+    <h1>display: inline-block;</h1>
+    <p>✓ รวมข้อดีของ inline และ block → ไม่ขึ้นบรรทัดใหม่ + กำหนด width/height ได้</p>
+    <div class="inline-block-example">
+        <div>Box A</div>
+        <div>Box B Box B</div>
+        <div>Box C</div>
+    </div>
+
+</body>
+</html>
