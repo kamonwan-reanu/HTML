@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Loop Practice</title>
+    </head>
+    <body>
+        <h2>Loop Practice</h2>
+        <div id="display"></div>
+
+        <script>
+            let maxNumber = 15;
+            let output = document.getElementById("display");
+
+            console.log("--- ข้อ 3: เลขคู่/คี่ ---");
+        for (let i = 0; i <= maxNumber; i++) {
+            let type = "";
+            if (i % 2 === 0) {
+                type = "(คู่)";
+            } else {
+                type = "(คี่)";
+            }
+            let text = i + " " + type;
+            console.log(text); // แสดงใน Console
+            output.innerHTML += text + "<br>"; // แสดงบนหน้าเว็บ
+            }
+
+            console.log("--- ข้อ 5.1: นับทีละ 2 ---");
+            output.innerHTML += "<br><b>นับทีละ 2:</b><br>";
+            for (let j = 0; j <= 10; j += 2) {
+                console.log("นับทีละ 2: " + j);
+                output.innerHTML += "นับทีละ 2: " + j + "<br>";
+            }
+            
+            console.log("--- ข้อ 5.2: นับถอยหลัง ---");
+            output.innerHTML += "<br><b>นับถอยหลัง:</b><br>";
+            for (let k = 10; k >= 0; k--) {
+                console.log("ถอยหลัง: " + k);
+                output.innerHTML += "ถอยหลัง: " + k + "<br>";
+            }
+            
+        </script>
+    </body>
+</html>

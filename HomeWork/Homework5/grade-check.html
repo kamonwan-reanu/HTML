@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Grade Check</title>
+    </head>
+
+    <body>
+        <h2>ระบบตรวจคะแนน</h2>
+        <div id="output"></div>
+
+        <script>
+            let score = 79;
+            let grade = "";
+            let status = "";
+
+            if(score >= 80) {
+                grade = "A";
+            } else if (score >= 70) {
+                grade = "B";
+            } else if (score >= 60) {
+                grade = "C";
+            } else if (score >= 50) {
+                grade = "D";
+            } else {
+                grade = "F";
+            }
+
+            if(score >= 50) {
+                status = "ผ่าน";
+            } else {
+                status = "ไม่ผ่าน";
+            }
+
+            let resultText = "คะแนนที่สุ่มได้: " + score + "<br>" +
+                             "เกรด: " + grade + "<br>" +
+                             "ผลสอบ: " + status;
+
+            document.getElementById("output").innerHTML = resultText;
+
+            console.log("คะแนนที่ได้:", score);
+            console.log("เกรด:", grade);
+            console.log("ผลสอบ:", status);
+            
+        </script>
+    </body>
+</html>
