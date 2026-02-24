@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <title>ฟังก์ชันคำนวณเกรด</title>
+    <style>
+        #outputBox {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #1a1a1a;
+            color: white;
+            border-radius: 8px;
+            min-height: 50px;
+            white-space: pre-line; 
+            border-left: 5px solid #2ecc71; 
+            font-family: sans-serif;
+        }
+        body { font-family: sans-serif; padding: 20px; }
+        input, button { padding: 8px; margin: 5px 0; }
+        button { background-color: #00bfff; color: white; border: none; cursor: pointer; border-radius: 4px; }
+    </style>
+</head>
+<body>
+
+    <h2>ฟังก์ชันคำนวณเกรด (Calculate Grade)</h2>
+
+    <p><b>กรอกคะแนน:</b></p>
+    <input type="number" id="scoreInput" placeholder="0 - 100">
+    <button onclick="runGrade()">คำนวณเกรด</button>
+    
+    <div id="outputBox">ผลลัพธ์จะปรากฏที่นี่...</div>
+
+    <script>
+        // ส่วนที่ 2
+        function calculateGrade(score) {
+            if (score >= 80) {
+                return "A";
+            } else if (score >= 70) {
+                return "B";
+            } else if (score >= 60) {
+                return "C";
+            } else if (score >= 50) {
+                return "D";
+            } else {
+                return "F";
+            }
+        }
+
+        // ส่วนที่ 3
+        function runGrade() {
+            const output = [];
+            let score = Number(document.getElementById("scoreInput").value);
+            let outputDiv = document.getElementById("outputBox");
+
+            if (isNaN(score) || score < 0 || score > 100 || document.getElementById("scoreInput").value === "") {
+                output.push("⚠️ กรุณากรอกคะแนน 0-100");
+                outputDiv.style.borderLeftColor = "#e74c3c"; // เปลี่ยนเป็นสีแดงถ้าผิดพลาด
+                outputDiv.textContent = output.join("\n");
+                return;
+            }
+
+            let grade = calculateGrade(score);
+
+            output.push("คะแนน: " + score);
+            output.push("เกรดที่ได้: " + grade);
+
+            // แสดงผลใน Console
+            console.log("คะแนน:", score);
+            console.log("เกรด:", grade);
+
+            // แสดงผลบนหน้าจอ
+            outputDiv.style.borderLeftColor = "#2ecc71"; 
+            outputDiv.textContent = output.join("\n");
+        }
+    </script>
+
+</body>
+</html>
